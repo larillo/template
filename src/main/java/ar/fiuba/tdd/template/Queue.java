@@ -8,8 +8,9 @@ public interface Queue<T> {
 
     void add(T item); //agregar un item.
 
-    T top( ); //retornar el primer item, lanzar exception si esta vacio.
+    T top(); //retornar el primer item, lanzar exception si esta vacio.
 
-    void remove( ); //remover el primer item, lanzar exception si esta vacio.
+    void remove(); //remover el primer item, lanzar exception si esta vacio.
 
 }
+
