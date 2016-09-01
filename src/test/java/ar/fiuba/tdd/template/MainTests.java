@@ -33,6 +33,15 @@ public class MainTests {
     }
 
     @Test
+    public void testIsEmpty2() {
+        que.add(23);
+        que.add(74);
+        que.remove();
+        que.remove();
+        assertTrue(que.isEmpty());
+    }
+
+    @Test
     public void testSize() {
         assertEquals(0, que.size());
     }
@@ -44,6 +53,28 @@ public class MainTests {
     }
 
     @Test
+    public void testSize2() {
+        que.add(39);
+        que.add(15);
+        que.add(92);
+        assertEquals(3, que.size());
+    }
+
+    @Test
+    public void testTop() {
+        que.add(39);
+        assertEquals((Integer)39, que.top());
+    }
+
+    @Test
+    public void testTop1() {
+        que.add(39);
+        que.add(63);
+        que.remove();
+        assertEquals((Integer)63, que.top());
+    }
+
+    @Test
     public void testAddRemove() {
         que.add(39);
         que.add(97);
@@ -51,6 +82,7 @@ public class MainTests {
         que.remove();
         que.remove();
         assertEquals(1, que.size());
+        assertEquals((Integer)24, que.top());
     }
 
 }
